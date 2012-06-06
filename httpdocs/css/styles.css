@@ -2,53 +2,16 @@
 /* =Reset default browser CSS.
 -------------------------------------------------------------- */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	background: transparent;
-	border: 0;
-	margin: 0;
-	padding: 0;
-	vertical-align: baseline;
-}
-body {
-	line-height: 1;
-}
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	font-weight: normal;
-}
 ol, ul {
 	list-style: none;
 }
-blockquote {
-	quotes: none;
-}
-blockquote:before, blockquote:after {
-	content: '';
-	content: none;
-}
-del {
-	text-decoration: line-through;
-}
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 a, a img {
 	border: 0; outline:none;
 }
 
 img { border: 0; }
 
-/* get rid of those system borders being generated for A tags */
 a:active {
   outline:none;
 }
@@ -88,27 +51,15 @@ a:active {
 	
 /* =LAYOUT
 ----------------------------------------*/
-body { width:100%; height:100%; font-family:Arial, Helvetica, sans-serif; }
-#outer { width:100%; min-height:800px; display:block;
-	
-background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-background: linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-
-}
-
-#inner { width:600px; height:450px; background:#efefef; position:relative; top:80px; border-radius: 15px; }
+body { margin:0; padding:0; }
+#outer_ct { width:1024px; height:768px; display:block; background:#f7ef22 url(../img/bg.jpg) top center no-repeat; -webkit-background-size: 1024px 768px;  }
+#inner_ct { width:568px; height:391px; position:relative; top:123px; left:385px; margin:0; padding:0; }
 
 /* FORM */
-#inner #entry { width:415px; position:relative; top:50px; }
-#inner fieldset { border:1px solid #ccc; padding:20px; border-radius:12px; }
-#inner legend { border:1px solid #ccc; padding:10px; border-radius:10px; }
-#inner label { width:100px; float:left; font-size:.9em; padding:3px 5px 0 0; margin:0 0 6px 0; text-align:right; }
-#inner label.state { width:50px; }
-#inner input[type='text'] { float:left; width:250px; height:18px; border:1px solid #999; margin:0 0 8px 0; }
-#inner select { position:relative; left:-5px; }
-#inner input.city, #inner input.zipcode { width:100px; }
+#inner_ct #entry { width:450px; margin:auto;/* margin-top:35px;*/ }
+#inner_ct fieldset { padding:25px 10px 10px 10px; }
+#inner_ct input { margin-top:8px; }
+#inner_ct input[type='text'] { width:415px; color:#666; }
+#inner_ct input.city { width:215px; float:left; }
+#inner_ct input.zipcode { margin-bottom:8px; }
+#inner_ct .ui-select { width:200px; float:left; position:relative; top:-2px; left:7px; height:85%; }

@@ -1,34 +1,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Source Marketing : InMarket SignUp</title>
-<style type="text/css" media="screen">@import "themes/css/jqtouch.css";</style>
-<script src="src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="src/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>InMarket</title>
+
+<link rel="apple-touch-icon" href="img/icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="img/icon-72px.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="img/icon-114px.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.css" /> 
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jquery.mobile.datebox.min.js"></script>
+<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i8n/jquery.mobile.datebox.i8n.en.js"></script>
+
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
 <body>
-<div id="outer" align="center">
+<div id="outer_ct">
 
-	<div id="inner">
+	<div id="inner_ct">
     
     	<form name="entry" id="entry" method="post" action="javascript:;">
             <fieldset>
-            	<legend>Sign Up Here</legend>
-                	<label for="firstname">First Name</label> <input type="text" name="firstname" />
-                	<label for="lastname">Last Name</label> <input type="text" name="lastname" />
-                    <label for="address1">Address 1</label> <input type="text" name="address1" />
-                    <label for="address2">Address 2</label> <input type="text" name="address2" />
-                    <label for="city">City</label> <input type="text" name="city" class="city" /> <label for="state" class="state">State</label> 
-                    <select>
-                    	<option value="">Select One</option>
+                	<input type="text" name="firstname" placeholder="First Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                	<input type="text" name="lastname" placeholder="Last Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="address1" placeholder="Address 1" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="address2" placeholder="Address 2" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="city" class="city" placeholder="City" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <select class="select">
+                    	<option value="">State</option>
                         
-                    </select><br clear="all" />
-                    <label for="zipcode">Zip Code</label> <input type="text" name="zipcode" class="zipcode" /><br clear="all" />
-                    <label for="dob">Date of Birth</label> <input type="text" name="dob" />
+                    </select>
+                    <input type="text" name="zipcode" class="zipcode" placeholder="Zip Code" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input name="dob_entry_req" placeholder="Date of Birth" id="dob_entry_req" type="date" class="datebox" data-role="datebox" data-options='{"mode": "flipbox"}'></div>
             </fieldset>
         </form>
         	
