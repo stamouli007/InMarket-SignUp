@@ -5,7 +5,7 @@
 
 <title>InMarket</title>
 
-<link rel="apple-touch-icon" href="img/icon.png" />
+ <link rel="apple-touch-icon" href="img/icon.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="img/icon-72px.png" />
 <link rel="apple-touch-icon" sizes="114x114" href="img/icon-114px.png" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -29,22 +29,79 @@
     
     	<form name="entry" id="entry" method="post" action="javascript:;">
             <fieldset>
-                	<input type="text" name="firstname" placeholder="First Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                	<input type="text" name="lastname" placeholder="Last Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input type="text" name="address1" placeholder="Address 1" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input type="text" name="address2" placeholder="Address 2" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                	<input type="text" name="name_req" placeholder="First Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                	<input type="text" name="lname_req" placeholder="Last Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="email_req" placeholder="Email Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="address" placeholder="Street Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
                     <input type="text" name="city" class="city" placeholder="City" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <select class="select">
+                    <select class="select" data-theme="d">
                     	<option value="">State</option>
-                        
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
                     </select>
-                    <input type="text" name="zipcode" class="zipcode" placeholder="Zip Code" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input name="dob_entry_req" placeholder="Date of Birth" id="dob_entry_req" type="date" class="datebox" data-role="datebox" data-options='{"mode": "flipbox"}'></div>
+                    <input type="text" name="zipcode_req" pattern="[0-9]*" class="zipcode" placeholder="Zip Code" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input name="dob_req" placeholder="Date of Birth" id="dob_entry_req" type="date" class="datebox" data-role="datebox" data-options='{"mode":"flipbox","useModal":"true","pickPageTheme":"a"}'>
+                    
+                    <div class='btn-submit'><input type="button" id="btn-submit" name="submit" data-inline="true" data-theme="a" value="Sign Up" /></div>
             </fieldset>
         </form>
         	
     
     </div>
+    
+    <ul class="controls">
+    	<li class="refresh"></li>
+        <li></li>
+        <li></li>
+    </ul>
 
 </div>
 </body>

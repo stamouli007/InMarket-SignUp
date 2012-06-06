@@ -52,7 +52,7 @@ a:active {
 /* =LAYOUT
 ----------------------------------------*/
 body { margin:0; padding:0; }
-#outer_ct { width:1024px; height:768px; display:block; background:#f7ef22 url(../img/bg.jpg) top center no-repeat; -webkit-background-size: 1024px 768px;  }
+#outer_ct { width:1024px; height:768px; display:block; background:#f7ef22 url(../img/bg.jpg) top center no-repeat; -webkit-background-size: 1024px 768px; position:relative;  }
 #inner_ct { width:568px; height:391px; position:relative; top:123px; left:385px; margin:0; padding:0; }
 
 /* FORM */
@@ -62,4 +62,11 @@ body { margin:0; padding:0; }
 #inner_ct input[type='text'] { width:415px; color:#666; }
 #inner_ct input.city { width:215px; float:left; }
 #inner_ct input.zipcode { margin-bottom:8px; }
-#inner_ct .ui-select { width:200px; float:left; position:relative; top:-2px; left:7px; height:85%; }
+#inner_ct .ui-select { width:200px; float:left; position:relative; top:-2px; left:7px; }
+#inner_ct .btn-submit { position:absolute; top:310px; left:390px; }
+
+
+/* CONTROLS */
+ul.controls { position:absolute; margin:0; padding:0; left:770px; top:660px; height:50px; }
+ul.controls li { float:right; width:50px; height:50px; margin:0 0 0 15px; }
+ul.controls li.refresh { background:url(../img/icon-refresh.png) no-repeat; -webkit-background-size:50px 50px; }
