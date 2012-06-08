@@ -52,21 +52,41 @@ a:active {
 /* =LAYOUT
 ----------------------------------------*/
 body { margin:0; padding:0; }
-#outer_ct { width:1024px; height:768px; display:block; background:#f7ef22 url(../img/bg.jpg) top center no-repeat; -webkit-background-size: 1024px 768px; position:relative;  }
+#outer_ct { width:1024px; height:768px; display:block; background:#f7ef22 url(../img/bg.jpg) top center no-repeat; -webkit-background-size: 1024px 768px; position:relative; overflow:hidden;  }
 #inner_ct { width:568px; height:391px; position:relative; top:123px; left:385px; margin:0; padding:0; }
+#blanket { width:1024px; height:768px; display:block; background:#fff; opacity:.6; position:absolute; z-index:10; display:none; }
 
-/* FORM */
-#inner_ct #entry { width:450px; margin:auto;/* margin-top:35px;*/ }
-#inner_ct fieldset { padding:25px 10px 10px 10px; }
+/* LOGIN FORM */
+#inner_ct #login_ct { width:350px; margin:auto; }
+#inner_ct #login_ct fieldset h2 { margin:0 0 15px 7px; padding:0; color:#777; font-size:2.3em; }
+#inner_ct #login_ct fieldset { padding:75px 0 10px 10px; }
+#inner_ct #login_ct input[type='text'] { width:300px; color:#666; margin-left:7px; }
+#inner_ct #login_ct input[type='password'] { width:300px; color:#666; margin-left:7px; }
+#inner_ct #login_ct fieldset p { margin:35px 0 0 5px; }
+
+/* CREATE ACCOUNT SCREEN */
+#create_account_ct { width:720px; height:490px; display:none; margin:auto; background:#fff; position:absolute; left:1024px; top:70px; z-index:20; color:#111; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding:40px; box-shadow: 0px 0px 50px #444; }
+#create_account_ct #create_ct { width:310px; margin:auto; }
+#create_ct input { margin-top:8px; }
+#create_account_ct #create_ct fieldset { padding:85px 0 0 0; }
+#create_account_ct #create_ct fieldset h2 { margin:0 0 15px 0; padding:0; color:#777; font-size:2.3em; }
+#create_account_ct #create_ct input[type='text'] { width:300px; color:#666; }
+#create_account_ct #create_ct input[type='password'] { width:300px; color:#666; }
+#create_account_ct #create_account_closeX { position:absolute; left:680px; background:url(../img/icon-closeX.png) center center no-repeat; -webkit-background-size:40px 40px; display:block; width:50px; height:50px; }
+
+/* ENTRY FORM */
+#inner_ct #entry_ct { width:450px; margin:auto; display:none; } /* form is hidden by default */
+#inner_ct #entry_ct fieldset { padding:25px 10px 10px 10px; }
 #inner_ct input { margin-top:8px; }
-#inner_ct input[type='text'] { width:415px; color:#666; }
-#inner_ct input.city { width:215px; float:left; }
-#inner_ct input.zipcode { margin-bottom:8px; }
+#inner_ct #entry_ct input[type='text'] { width:415px; color:#666; }
+#inner_ct #entry_ct input.city { width:215px; float:left; }
+#inner_ct #entry_ct input.zipcode { margin-bottom:8px; }
 #inner_ct .ui-select { width:200px; float:left; position:relative; top:-2px; left:7px; }
-#inner_ct .btn-submit { position:absolute; top:310px; left:390px; }
+#inner_ct #entry_ct .btn-submit { position:absolute; top:310px; left:390px; }
 
 
 /* CONTROLS */
-ul.controls { position:absolute; margin:0; padding:0; left:770px; top:660px; height:50px; }
-ul.controls li { float:right; width:50px; height:50px; margin:0 0 0 15px; }
+ul.controls { position:absolute; margin:0; padding:0; left:770px; top:660px; height:50px; z-index:1000; }
+ul.controls li { float:right; width:50px; height:50px; margin:0 0 0 15px; overflow:visible; }
 ul.controls li.refresh { background:url(../img/icon-refresh.png) no-repeat; -webkit-background-size:50px 50px; }
+ul.controls li.export { background:url(../img/icon-export.png) no-repeat; -webkit-background-size:50px 50px; visibility:hidden; }

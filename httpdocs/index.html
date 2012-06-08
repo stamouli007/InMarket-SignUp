@@ -24,9 +24,49 @@
 
 <body>
 <div id="outer_ct">
+	<div id="blanket"></div>
+    
+	<div id="create_account_ct"><div id="create_account_closeX"></div>
+    
+    	<div id="create_ct">
+    	<form name="create_account" id="create_account" method="post" action="javascript:;">
+        	<fieldset>
+            	<h2>New Account</h2>
+        		<input type="text" name="create_name_req" class="create_name" placeholder="Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                <input type="text" name="create_email_req" class="create_email" placeholder="Email Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
+            	<input type="text" name="create_username_req" class="create_username" placeholder="Username" autocapitalize="off" autocorrect="off" autocomplete="off" />
+            	<input type="password" name="create_password_req" class="create_password" placeholder="Password" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                <div style="padding:20px 0 0 0; position:relative; left:-5px;">
+                <input type="button" id="btn-create" name="submit" data-inline="true" data-theme="a" value="Create" />
+                </div>
+            </fieldset>
+        </form>
+        </div>
+    </div>
 
 	<div id="inner_ct">
+    	
+        <div id="login_ct">
+        <form name="login" id="login" method="post" action="javascript:;">
+        	<fieldset>
+            	<h2>Welcome</h2>
+            	<input type="text" name="name_req" class="login_username" placeholder="Username" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                <input type="password" name="password_req" class="login_password" placeholder="Password" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                <div id="buttons-sign-in">
+                <input type="button" id="btn-sign-in" name="submit" data-inline="true" data-theme="a" value="LOG IN" /> OR 
+                
+                <input type="button" id="btn-create-account" name="create-account" data-inline="true" data-theme="b" value="Create Account" />
+                
+                <p><a href="javascript:;" id="reset-password">Reset Password</a></p>
+                
+                </div>
+            </fieldset>
+        </form>
+        </div>
+        
+        
     
+    	<div id="entry_ct">
     	<form name="entry" id="entry" method="post" action="javascript:;">
             <fieldset>
                 	<input type="text" name="name_req" placeholder="First Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
@@ -93,13 +133,14 @@
                     <div class='btn-submit'><input type="button" id="btn-submit" name="submit" data-inline="true" data-theme="a" value="Sign Up" /></div>
             </fieldset>
         </form>
-        	
+       	</div>
+        
     
     </div>
     
     <ul class="controls">
     	<li class="refresh"></li>
-        <li></li>
+        <li class="export"></li>
         <li></li>
     </ul>
 
