@@ -79,14 +79,28 @@ body { margin:0; padding:0; }
 #inner_ct #entry_ct fieldset { padding:25px 10px 10px 10px; }
 #inner_ct input { margin-top:8px; }
 #inner_ct #entry_ct input[type='text'] { width:415px; color:#666; }
-#inner_ct #entry_ct input.city { width:215px; float:left; }
-#inner_ct #entry_ct input.zipcode { margin-bottom:8px; }
+#inner_ct #entry_ct input.entry_city { width:215px; float:left; }
+#inner_ct #entry_ct input.entry_zipcode { margin-bottom:8px; }
 #inner_ct .ui-select { width:200px; float:left; position:relative; top:-2px; left:7px; }
 #inner_ct #entry_ct .btn-submit { position:absolute; top:310px; left:390px; }
+
+/* VIEW DATA SCREEN */
+#view_data_ct { width:720px; height:490px; display:none; margin:auto; background:#fff; position:absolute; left:1024px; top:70px; z-index:20; color:#111; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; padding:40px; box-shadow: 0px 0px 50px #444; }
+#view_data_ct #view_data_closeX { position:absolute; left:680px; background:url(../img/icon-closeX.png) center center no-repeat; -webkit-background-size:40px 40px; display:block; width:50px; height:50px; }
+#view_ct { width:600px; margin:auto; }
+#view_ct ul.view_data { margin:60px 0 0 0; padding:0; list-style-type:none; height:400px; width:600px; overflow-y: auto; overflow-x: hidden; }
+#view_ct ul.view_data li { height:25px; width:592px; line-height:25px; background:#eee; padding:4px; overflow:hidden; }
+#view_ct tr:nth-child(odd) { background:#ddd; }
+/*#view_ct ul.view_data li:first-child { display:none; }
+#view_ct ul.view_data li span { display:inline-block; margin-right:5px; }*/
+#view_ct .label_date { width:150px; max-width:150px; overflow:hidden;}
+#view_ct .label_fname { width:90px; max-width:90px; overflow:hidden; }
+#view_ct .label_lname { width:120px; max-width:120px; overflow:hidden; }
+#view_ct .label_email { width:190px; max-width:190px; overflow:hidden; }
 
 
 /* CONTROLS */
 ul.controls { position:absolute; margin:0; padding:0; left:770px; top:660px; height:50px; z-index:1000; }
 ul.controls li { float:right; width:50px; height:50px; margin:0 0 0 15px; overflow:visible; }
 ul.controls li.refresh { background:url(../img/icon-refresh.png) no-repeat; -webkit-background-size:50px 50px; }
-ul.controls li.export { background:url(../img/icon-export.png) no-repeat; -webkit-background-size:50px 50px; visibility:hidden; }
+ul.controls li.export { background:url(../img/icon-export.png) no-repeat; -webkit-background-size:50px 50px; /*visibility:hidden;*/ }

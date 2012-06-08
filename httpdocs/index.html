@@ -43,6 +43,44 @@
         </form>
         </div>
     </div>
+    
+    
+    <div id="view_data_ct"><div id="view_data_closeX"></div>
+    
+    	<div id="view_ct">
+        	<!--<ul class="view_data">
+            	<li id="data_template" class="data_template">
+                	<span class="label_date">Date</span>
+                    <span class="label_fname">First Name</span>
+                    <span class="label_lname">Last Name</span>
+                    <span class="label_email">Email</span>
+                </li>
+            </ul>-->
+            
+            <table>
+                  <caption></caption>
+                  <colgroup />
+                  <colgroup span="2" title="title" />
+                  <thead>
+                      <tr>
+                          <th class="label_date">Date</th>
+                          <th class="label_fname">First Name</th>
+                          <th class="label_lname">Last Name</th>
+                          <th class="label_email">Email</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr id="data_template" class="data_template" style="display:none">
+                          <td class="label_date">Obi Wan Kenobi</td>
+                          <td class="label_fname">Light</td>
+                          <td class="label_lname">Jedi</td>
+                          <td class="label_email">Email</td>
+                      </tr>
+                  </tbody>
+              </table>
+        
+        </div>
+    </div>
 
 	<div id="inner_ct">
     	
@@ -69,12 +107,12 @@
     	<div id="entry_ct">
     	<form name="entry" id="entry" method="post" action="javascript:;">
             <fieldset>
-                	<input type="text" name="name_req" placeholder="First Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                	<input type="text" name="lname_req" placeholder="Last Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input type="text" name="email_req" placeholder="Email Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input type="text" name="address" placeholder="Street Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input type="text" name="city" class="city" placeholder="City" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <select class="select" data-theme="d">
+                	<input type="text" name="entry_fname_req" id="entry_fname" placeholder="First Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                	<input type="text" name="entry_lname_req" id="entry_lname" placeholder="Last Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="entry_email_req" id="entry_email" placeholder="Email Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="entry_address" id="entry_address" placeholder="Street Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="entry_city" id="entry_city" class="entry_city" placeholder="City" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <select class="select" id="entry_state" data-theme="d">
                     	<option value="">State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -127,8 +165,8 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
-                    <input type="text" name="zipcode_req" pattern="[0-9]*" class="zipcode" placeholder="Zip Code" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input name="dob_req" placeholder="Date of Birth" id="dob_entry_req" type="date" class="datebox" data-role="datebox" data-options='{"mode":"flipbox","useModal":"true","pickPageTheme":"a"}'>
+                    <input type="text" name="entry_zipcode_req" pattern="[0-9]*" maxlength="5" class="entry_zipcode" id="entry_zipcode" placeholder="Zip Code" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input name="entry_dob_req" placeholder="Date of Birth" class="entry_db" id="entry_dob" type="date" class="datebox" data-role="datebox" data-options='{"mode":"flipbox","useModal":"true","pickPageTheme":"a"}'>
                     
                     <div class='btn-submit'><input type="button" id="btn-submit" name="submit" data-inline="true" data-theme="a" value="Sign Up" /></div>
             </fieldset>
