@@ -20,6 +20,9 @@
 
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/scripts.js"></script>
+<!--<script type="text/javascript" src="js/sorttable.js"></script>-->
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/themes/blue/style.css" />
 </head>
 
 <body>
@@ -32,7 +35,7 @@
     	<form name="create_account" id="create_account" method="post" action="javascript:;">
         	<fieldset>
             	<h2>New Account</h2>
-        		<input type="text" name="create_name_req" class="create_name" placeholder="Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+        		<input type="text" name="create_name_req" class="create_name" placeholder="Name" autocapitalize="on" autocorrect="off" autocomplete="off" />
                 <input type="text" name="create_email_req" class="create_email" placeholder="Email Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
             	<input type="text" name="create_username_req" class="create_username" placeholder="Username" autocapitalize="off" autocorrect="off" autocomplete="off" />
             	<input type="password" name="create_password_req" class="create_password" placeholder="Password" autocapitalize="off" autocorrect="off" autocomplete="off" />
@@ -57,15 +60,13 @@
                 </li>
             </ul>-->
             
-            <table>
-                  <caption></caption>
-                  <colgroup />
-                  <colgroup span="2" title="title" />
+            <div id="view_table_ct">
+            <table class="tablesorter" id="data-table">
                   <thead>
                       <tr>
                           <th class="label_date">Date</th>
-                          <th class="label_fname">First Name</th>
-                          <th class="label_lname">Last Name</th>
+                          <th class="label_fname">First</th>
+                          <th class="label_lname">Last</th>
                           <th class="label_email">Email</th>
                       </tr>
                   </thead>
@@ -78,6 +79,7 @@
                       </tr>
                   </tbody>
               </table>
+              </div>
         
         </div>
     </div>
@@ -107,11 +109,11 @@
     	<div id="entry_ct">
     	<form name="entry" id="entry" method="post" action="javascript:;">
             <fieldset>
-                	<input type="text" name="entry_fname_req" id="entry_fname" placeholder="First Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                	<input type="text" name="entry_lname_req" id="entry_lname" placeholder="Last Name" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                	<input type="text" name="entry_fname_req" id="entry_fname" placeholder="First Name" autocapitalize="on" autocorrect="off" autocomplete="off" />
+                	<input type="text" name="entry_lname_req" id="entry_lname" placeholder="Last Name" autocapitalize="on" autocorrect="off" autocomplete="off" />
                     <input type="text" name="entry_email_req" id="entry_email" placeholder="Email Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input type="text" name="entry_address" id="entry_address" placeholder="Street Address" autocapitalize="off" autocorrect="off" autocomplete="off" />
-                    <input type="text" name="entry_city" id="entry_city" class="entry_city" placeholder="City" autocapitalize="off" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="entry_address" id="entry_address" placeholder="Street Address" autocapitalize="on" autocorrect="off" autocomplete="off" />
+                    <input type="text" name="entry_city" id="entry_city" class="entry_city" placeholder="City" autocapitalize="on" autocorrect="off" autocomplete="off" />
                     <select class="select" id="entry_state" data-theme="d">
                     	<option value="">State</option>
                         <option value="AL">Alabama</option>

@@ -60,12 +60,12 @@ $(document).ready(function() {
 			$screen.show();
 			
 			$blanket.fadeIn('fast',function() {
-			
+				pullData();
 				$screen.animate({
-					left: '112px'
+					left: '132px'
 				}, 150, function() {
 						// Animation complete.
-						pullData();
+						
 				});
 			
 			});
@@ -87,12 +87,45 @@ $(document).ready(function() {
 	}
 	
 	// PULL DATA and display in table
+	$("#data-table").tablesorter();
+	
 	function pullData() {
 		
+		var headerHTML = '<th class="label_date">Date</th>';
+        headerHTML += '<th class="label_fname">First</th>';
+        headerHTML += '<th class="label_lname">Last</th>';
+        headerHTML += '<th class="label_email">Email</th>';
+		
 		// refresh table
-		$('#view_ct tbody tr').each(function() {
-			if(!$(this).is(":first-child")) $(this).remove();
-		});
+		if($('.tablesorter tbody tr').length > 1) {
+			
+			$('.tablesorter thead tr').html(headerHTML);
+			
+			$('.tablesorter tbody tr').each(function() {
+				if(!$(this).hasClass("data_template")) {
+					$(this).remove();
+				}
+			});
+			$("#data-table").tablesorter();
+			$("#data-table").trigger("update");
+			
+			
+		}
+		
+		/*var tableHTML = '<tr id="data_template" class="data_template" style="display:none">';
+        tableHTML +=	'<td class="label_date">Obi Wan Kenobi</td>';
+        tableHTML +=	'<td class="label_fname">Light</td>';
+        tableHTML +=	'<td class="label_lname">Jedi</td>';
+        tableHTML +=	'<td class="label_email">Email</td>';
+        tableHTML +=	'</tr>';
+		
+		$(".tablesorter tbody").empty();*/
+		
+		//alert($(".tablesorter tbody").html())
+		//$(".tablesorter tbody").append(tableHTML);
+		
+		
+		var idx = 0;
 		
 		db.transaction(
 			function(transaction){
@@ -105,14 +138,20 @@ $(document).ready(function() {
 							var newEntryRow = $("#data_template").clone();
 							newEntryRow.removeAttr('id');
 							newEntryRow.removeAttr('style');
+							newEntryRow.removeAttr('class');
+							var rowClass = (idx<1)? 'even':'odd'; idx = (idx<1)? 1:0;
+							newEntryRow.addClass(rowClass);
 							newEntryRow.data('entryId', row.id);
-							newEntryRow.appendTo('#view_ct tbody');
+							newEntryRow.appendTo('.tablesorter tbody');
 							var dt = new Date(row.date);
 							newEntryRow.find('.label_date').text(showLocalDate(dt));
 							newEntryRow.find('.label_fname').text(row.firstname);
 							newEntryRow.find('.label_lname').text(row.lastname);
 							newEntryRow.find('.label_email').text(row.email);
 						}
+						
+						
+						$("#data-table").trigger("update");
 					},
 					errorHandler
 				);
@@ -252,7 +291,8 @@ $(document).ready(function() {
 	$("#btn-submit").click(function() {
 		
 		// timestamp
-		var date = new Date().toLocaleString()+':'+new Date().getMilliseconds();
+		var date = new Date(); //.toLocaleString()+':'+new Date().getMilliseconds();
+		
 		// the admin email
 		var admin_email = localStorage.getItem('email');
 		
